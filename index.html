@@ -7,7 +7,7 @@
     <style>
         body {
             background-color: #2C003E; /* Dark purple background */
-            color: white; /* White font color */
+            color: white;              /* White font color */
             font-family: Arial, sans-serif;
             padding: 20px;
         }
@@ -61,7 +61,7 @@
         function convertToSecretInt(secret) {
             const alphaMap = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
             let result = [];
-            secret = secret.toUpperCase().replace(/[^A-Z]/g, ''); // Remove non-alphabetic characters
+            secret = secret.toUpperCase().replace(/[^A-Z]/g, ''); // Remove non-alphabetic characters (including spaces, numbers and special characters)
             for (let i = 0; i < secret.length; i++) {
                 result.push(alphaMap.indexOf(secret[i]) + 1);
             }
